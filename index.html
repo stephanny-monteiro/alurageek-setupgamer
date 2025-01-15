@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fontes do Projeto: Raleway -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>AluraGeek</title>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <h1 class="cabecalho-titulo">Setup Gamer</h1>
+        <a class="cabecalho-botao" href="">
+            Shop
+            <img class="icone-carrinho" src="./assets/icone-carrinho.png" alt="Ícone de carrinho">
+        </a>
+    </header>
+
+    <!-- Container principal -->
+    <main class="container-principal">
+
+        <!-- Seção meus produtos -->
+        <section class="produtos">
+            <h1 class="produtos-titulo">Produtos:</h1>
+            <ul class="produtos-lista">
+                <li class="produtos-lista--item">
+                    <img class="item-img" src="./assets/anel de luz led.png" alt="Iluminária">
+                    <h4 class="item-nome">Anel de Luz LED</h4> <!-- Anel de Luz LED Ring Light RGB 10 -->
+                    <div class="item-value">
+                        <p>R$ 94,00</p> <!-- preço na Amazon -->
+                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    </div>
+                </li>
+                <li class="produtos-lista--item">
+                    <img class="item-img" src="./assets/cadeira-gamer.png" alt="Cadeira gamer">
+                    <h4 class="item-nome">Cadeira Gamer</h4> <!-- Cadeira Gamer Pelegrin em Couro -->
+                    <div class="item-value">
+                        <p>R$ 499,00</p> <!-- preço na Amazon -->
+                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    </div>
+                </li>
+                <li class="produtos-lista--item">
+                    <img class="item-img" src="./assets/monitor-gamer.png" alt="Monitor">
+                    <h4 class="item-nome">Monitor Samsung</h4> <!-- Monitor Curvo Samsung LED 27 -->
+                    <div class="item-value">
+                        <p>R$ 799,00</p> <!-- preço na Amazon -->
+                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    </div>
+                </li>
+                <li class="produtos-lista--item">
+                    <img class="item-img" src="./assets/pc-gamer.png" alt="CPU gamer">
+                    <h4 class="item-nome">Pc Gamer 3green Intel</h4> <!-- Pc Gamer 3green Play Intel Core I7 -->
+                    <div class="item-value">
+                        <p>R$ 1.434,39</p> <!-- preço no Carrefour -->
+                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    </div>
+                </li>
+                <li class="produtos-lista--item">
+                    <img class="item-img" src="./assets/console playstation-gamer.png" alt="Console PlayStation">
+                    <h4 class="item-nome">Console PlayStation 5</h4> <!-- Console PlayStation 5 Slim Edição Digital -->
+                    <div class="item-value">
+                        <p>R$ 3.327,01</p> <!-- preço na Amazon -->
+                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    </div>
+                </li>
+                <li class="produtos-lista--item">
+                    <img class="item-img" src="./assets/headset-gamer.png" alt="Headset gamer">
+                    <h4 class="item-nome">Headset Gamer</h4>
+                    <div class="item-value">
+                        <p>R$ 79,90</p> <!-- preço na Amazon -->
+                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    </div>
+                </li>
+                <li class="produtos-lista--item">
+                    <img class="item-img" src="./assets/teclado-gamer.png" alt="Teclado gamer">
+                    <h4 class="item-nome">Teclado Gamer</h4>
+                    <div class="item-value">
+                        <p>R$ 47,78</p> <!-- preço na Amazon -->
+                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    </div>
+                </li>
+                <li class="produtos-lista--item">
+                    <img class="item-img" src="./assets/mouse-gamer.png" alt="Mouse gamer">
+                    <h4 class="item-nome">Mouse Gamer</h4> 
+                    <div class="item-value">
+                        <p>R$ 190,00</p> <!-- preço na Amazon -->
+                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    </div>
+                </li>
+                <li class="produtos-lista--item">
+                    <img class="item-img" src="./assets/mesa-gamer.png" alt="Mesa gamer">
+                    <h4 class="item-nome">Mesa Gamer</h4>
+                    <div class="item-value">
+                        <p>R$ 169,00</p> <!-- preço na Amazon -->
+                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <button class="seta-esquerda">←</button>
+        <button class="seta-direita">→</button>
+
+        <!-- Seção adicionar produtos -->
+        <section class="form" id="formulario">
+            <h1 class="form-titulo">Adicionar Produto:</h1>
+            <!-- forms -->
+            <form class="form-inputs">
+                <div class="form-grupo">
+                    <label for="Nome"></label>
+                    <input class="form-grupo--campo" type="text" id="name" name="nome" placeholder="Nome..." required>
+                </div>
+                <div class="form-grupo">
+                    <label for="Valor"></label>
+                    <input class="form-grupo--campo" type="text" id="valor" name="valor" placeholder="Valor..." required>
+                </div>
+            </form>
+            <div class="form-botoes">
+                <button class="form-botoes--guardar">Guardar</button>
+                <button class="form-botoes--limpar">Limpar</button>
+            </div>
+        </section>
+    </main>
+
+    <!--Rodapé-->
+    <footer class="container-rodape">
+        <div>
+            <img src="./assets/logo-alurageek.png" alt="Logo do AluraGeek">
+        </div>
+        <p class="rodape-texto">Desenvolvido por Stephanny Monteiro</p>
+        <small class="rodape-texto">Alura Latam- 2024</small>
+    </footer>
+        <script src="main.js"></script>
+</body>
+</html>

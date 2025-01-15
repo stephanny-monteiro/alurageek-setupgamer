@@ -1,0 +1,219 @@
+/* variáveis CSS */
+:root {
+    --cor-azul: #1D2B53; 
+    --cor-rosa: #AE445A;
+    --cor-clara: #E5E5E5;
+    --cor-escura: #464646;
+    --cor-roxo-claro: #7E2553; 
+    --cor-roxo-escuro: #5D0E41; 
+
+    --fonte-primaria: 'Raleway', sans-serif;
+}
+
+/* estrutura da página */
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: auto;
+}
+
+body {
+    padding: 0% 0%;
+    font-family: var(--fonte-primaria);
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+/* cabeçalho */
+.cabecalho {
+    background-color: var(--cor-azul);
+    padding: 15px 30px 15px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabecalho-titulo {
+    color: var(--cor-rosa);
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho-botao {
+    color: var(--cor-clara);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.icone-carrinho {
+    width: 30px;
+    height: auto;
+}
+
+/* conteúdo principal */
+/* produtos */
+.container-principal {
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.produtos {
+    /* padding: 0px 40px 40px 40px; */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.produtos-titulo {
+    text-align: start;
+    font-size: 1.5rem;
+}
+
+.produtos-lista {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden; /* Rrolagem horizontal */
+    position: relative; /* As setas serão posicionadas mediante essa classe-container*/
+    width: 1280px;
+    gap: 10px;
+}
+
+.produtos-lista--item {
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    background-color: var(--cor-roxo-claro);
+    border: 2px solid var(--cor-roxo-escuro);
+    border-radius: 8px; /* Bordas arredondadas */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-img {
+    border: 2px solid var(--cor-roxo-escuro);
+    border-radius: 8px;
+}
+
+.item-nome {
+    color: var(--cor-clara);
+    font-size: 0.938rem;
+}
+
+.item-value {
+    color: var(--cor-clara);
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* botões */
+.seta-esquerda, .seta-direita {
+    padding: 10px; 
+    background-color: var(--cor-roxo-escuro);
+    color: var(--cor-clara);
+    border: none;
+    border-radius: 4px; /* Bordas arredondadas */
+    position: absolute;
+    top: 50%; /* Alinha verticalmente no meio do contêiner */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    z-index: 10; /* Garante que as setas fiquem acima dos produtos */
+}
+
+.seta-esquerda {
+    left: 10px; /* Distância da borda esquerda */
+}
+
+.seta-direita {
+    right: 10px; /* Distância da borda direita */
+}
+
+/* hover */
+.seta-esquerda:hover, .seta-direita:hover {
+    background-color: var(--cor-roxo-claro); /* Cor ao passar o mouse */
+}
+
+/* formulário */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.form-titulo {
+    text-align: start;
+    font-size: 1.5rem;
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-grupo--campo {
+    width: 392px;
+    height: auto;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: var(--cor-clara);
+    border: 2px solid #3D3D3D;
+    border-radius: 14px;
+    outline: none; /* sem marcação ao redor */
+}
+
+/* botões */
+.form-botoes {
+    display: flex;
+    gap: 12px;
+}
+
+.form-botoes--guardar {
+    width: 188px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--cor-roxo-claro);
+    color: var(--cor-clara);
+    font-size: 1.25rem;
+    outline: none; /* sem marcação ao redor */
+}
+
+.form-botoes--limpar {
+    width: 188px;
+    padding: 10px;
+    border: 2px solid #3D3D3D;
+    border-radius: 8px;
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+    font-size: 1.25rem;
+    outline: none; /* sem marcação ao redor */
+}
+
+/* rodapé */
+.container-rodape {
+    background-color: var(--cor-azul);
+    padding: 54px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rodape-texto {
+    color: var(--cor-clara);
+}
