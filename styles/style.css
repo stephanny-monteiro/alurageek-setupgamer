@@ -86,9 +86,10 @@ ol, ul, li {
 .produtos-lista {
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: hidden; /* Rrolagem horizontal */
-    position: relative; /* As setas serão posicionadas mediante essa classe-container*/
-    width: 1280px;
+    overflow-x: hidden; /* Rolagem horizontal */
+    position: relative; /* As setas serão posicionadas mediante essa classe-container */
+    max-width: 1280px;/* para que a largura não ultrapasse esse limite. */
+    width: 100%; /* largura proporcional ao tamanho da tela */
     gap: 10px;
 }
 
