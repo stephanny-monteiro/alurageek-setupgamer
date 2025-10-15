@@ -1,0 +1,24 @@
+{
+  "name": "challenge-alurageek",
+  "version": "1.0.0",
+  "description": "**AluraGeek**",
+  "main": "main.js",
+  "scripts": {
+    "api": "json-server --watch database/db.json --port 3000 --host 0.0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephanny-monteiro/alurageek-setupgamer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/stephanny-monteiro/alurageek-setupgamer/issues"
+  },
+  "homepage": "https://github.com/stephanny-monteiro/alurageek-setupgamer#readme",
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}

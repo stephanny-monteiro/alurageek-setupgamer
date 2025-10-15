@@ -1,0 +1,81 @@
+/* ------------------------------ Responsividade ----------------------------------*/
+/* Mobile e telas menores */
+@media (max-width: 767px) {
+    html, body {
+        overflow-x: hidden; /* previne overflow horizontal */
+    }
+    
+    /* cabecalho */
+    .cabecalho {
+        padding: 15px 15px 15px 15px;
+    }
+
+    .cabecalho-titulo {
+        white-space: nowrap;
+    }
+
+    /* produtos */
+    .lista-produtos {
+        display: flex;
+        overflow: hidden; /* esconde o que ultrapassar */
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        transition: transform 0.5s ease-in-out; /* animacao */;
+    }
+
+    .lista-produtos--item {
+        flex: 0 0 auto; /* itens nao encolhem nem crescem */
+        max-width: 320px; /* garante que nao ultrapasse */
+        margin: 0 auto; /* centraliza o item */
+    }
+
+    .lista-produtos--item:hover {
+        transform: none; /* remove o efeito hover no mobile */
+    }
+
+    .item-img {
+        width: 100%;
+        height: auto;
+        max-height: 220px;
+        object-fit: contain; /* mantem a proporcao da imagem */
+    }
+
+    .seta-esquerda,
+    .seta-direita {
+        display: flex; /* só aparece no mobile */
+    }
+
+    /* Modal */
+    .modal-conteudo {
+        width: 90%; /* ocupa quase toda a largura */
+        max-width: 95%; /* garante que não ultrapasse */
+        margin: 20% auto; /* centraliza mais no meio da tela */
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+
+    .modal-conteudo h2 {
+        font-size: 18px;
+    }
+
+    .lista-carrinho li {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .finalizar-compra {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    /* rodape */
+    .container-rodape {
+        padding: 30px 15px 30px 15px;
+    }
+
+    .rodape-logo {
+        width: 100%; /* ajusta a largura da imagem para 100% do contêiner pai */
+        height: auto; /* mantem a proporcao da imagem */
+    }
+};

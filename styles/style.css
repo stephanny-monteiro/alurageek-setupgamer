@@ -1,4 +1,4 @@
-/* variáveis CSS */
+/* variaveis CSS */
 :root {
     --cor-azul: #1D2B53; 
     --cor-rosa: #AE445A;
@@ -8,9 +8,10 @@
     --cor-roxo-escuro: #5D0E41; 
 
     --fonte-primaria: 'Raleway', sans-serif;
+    --fonte-secundaria: 'Roboto', sans-serif;
 }
 
-/* estrutura da página */
+/* estrutura da pagina */
 * {
     margin: 0%;
     padding: 0%;
@@ -33,12 +34,13 @@ ol, ul, li {
     list-style: none;
 }
 
-/* cabeçalho */
+/* cabecalho */
 .cabecalho {
     background-color: var(--cor-azul);
     padding: 15px 30px 15px 30px;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .cabecalho-titulo {
@@ -48,12 +50,18 @@ ol, ul, li {
 }
 
 .cabecalho-botao {
+    background: none; /* remove o fundo cinza */
+    border: none; /* remove a borda padrão */
+    padding: 0; /* remove espaçamento interno extra */
+    cursor: pointer;
+    
     color: var(--cor-clara);
     text-decoration: none;
     display: flex;
     align-items: center;
     font-size: 1.75rem;
     font-weight: 600;
+    gap: 8px;
 }
 
 .icone-carrinho {
@@ -61,7 +69,7 @@ ol, ul, li {
     height: auto;
 }
 
-/* conteúdo principal */
+/* conteudo principal */
 /* produtos */
 .container-principal {
     padding: 60px 40px;
@@ -71,142 +79,286 @@ ol, ul, li {
     gap: 50px;
 }
 
-.produtos {
-    /* padding: 0px 40px 40px 40px; */
+.lista {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    position: relative; /* mantem o titulo organizado */
 }
 
-.produtos-titulo {
+.lista-titulo {
     text-align: start;
     font-size: 1.5rem;
+    margin: 0;
+    color: var(--cor-roxo-escuro);
 }
 
-.produtos-lista {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: hidden; /* Rolagem horizontal */
-    position: relative; /* As setas serão posicionadas mediante essa classe-container */
-    max-width: 1280px;/* para que a largura não ultrapasse esse limite. */
-    width: 100%; /* largura proporcional ao tamanho da tela */
-    gap: 10px;
+/* GRID responsivo (desktop no estilo base) */
+.lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* ajusta colunas automaticamente */
+    gap: 20px;
+    justify-content: flex-start;
+    margin: 0 auto;
+    max-width: 1200px; /* limita linha em telas muito largas */
+    align-items: start;
 }
 
-.produtos-lista--item {
-    width: 200px;
-    height: auto;
-    padding: 10px;
+.lista-produtos--item {
     background-color: var(--cor-roxo-claro);
     border: 2px solid var(--cor-roxo-escuro);
-    border-radius: 8px; /* Bordas arredondadas */
+    border-radius: 12px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: auto; /* deixa altura automática */
+    height: 100%; /* ocupa só o necessário */
+    box-sizing: border-box;
 }
 
+/* efeito hover agradável */
+.lista-produtos--item:hover {
+    transform: translateY(-6px); /* levanta o card */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08); /* sombra padrao */
+}
+
+/* imagem mesma altura e corte com object-fit */
 .item-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* cobre o espaço sem distorcer */
     border: 2px solid var(--cor-roxo-escuro);
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
 .item-nome {
     color: var(--cor-clara);
-    font-size: 0.938rem;
+    font-family: var(--fonte-secundaria);
+    font-size: 0.98rem;
+    font-weight: 600;
+    margin: 0;
 }
 
-.item-value {
-    color: var(--cor-clara);
-    font-size: 1rem;
+/* área com preço e botão */
+.item-descricao {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    margin-top: 0; /* não empurra para baixo */
+    gap: 8px;
 }
 
-/* botões */
-.seta-esquerda, .seta-direita {
-    padding: 10px; 
+/* preço */
+.item-preco {
+    color: var(--cor-clara);
+    font-family: var(--fonte-secundaria);
+    font-size: 0.95rem;
+}
+
+/* botao de adicionar ao carrinho dentro do card */
+.btn-carrinho {
+    background: var(--cor-roxo-escuro);
+    border: none;
+    padding: 6px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* icone dentro do botao */
+.btn-carrinho img {
+    width: 20px;
+    height: 20px;
+}
+
+/* -------- BASE (desktop) -------- */
+.seta-esquerda,
+.seta-direita {
+    position: absolute;
+    top: 50%; /* meio do container */
+    transform: translateY(-50%);
     background-color: var(--cor-roxo-escuro);
     color: var(--cor-clara);
     border: none;
-    border-radius: 4px; /* Bordas arredondadas */
-    position: absolute;
-    top: 50%; /* Alinha verticalmente no meio do contêiner */
-    transform: translateY(-50%); /* Centraliza verticalmente */
-    cursor: pointer; /* Muda o cursor ao passar o mouse */
-    z-index: 10; /* Garante que as setas fiquem acima dos produtos */
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: none; /* escondido no desktop */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
 }
 
 .seta-esquerda {
-    left: 10px; /* Distância da borda esquerda */
+    left: -15px;
 }
 
 .seta-direita {
-    right: 10px; /* Distância da borda direita */
+    right: -15px;
 }
 
-/* hover */
-.seta-esquerda:hover, .seta-direita:hover {
-    background-color: var(--cor-roxo-claro); /* Cor ao passar o mouse */
+.seta-esquerda:hover,
+.seta-direita:hover {
+    background-color: var(--cor-roxo-claro);
 }
 
-/* formulário */
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+/* carrinho */
+#carrinho-modal {
+  display: none; /* oculto por padrão */
 }
 
-.form-titulo {
-    text-align: start;
-    font-size: 1.5rem;
+#carrinho-modal.ativo {
+  display: flex; /* centraliza ao ativar */
 }
 
-.form-inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.modal {
+    position: fixed;
+    z-index: 1000; /* fica acima de outros elementos */
+    inset: 0; /* equivale a top:0; left:0; width:100%; height:100% */
+    background-color: rgba(0, 0, 0, 0.6); /* fundo preto com transparência */
+
+    /* centralização */
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
 }
 
-.form-grupo--campo {
-    width: 392px;
-    height: auto;
-    padding: 10px;
-    font-size: 1rem;
+.modal-conteudo {
     background-color: var(--cor-clara);
-    border: 2px solid #3D3D3D;
-    border-radius: 14px;
-    outline: none; /* sem marcação ao redor */
+    padding: 20px 30px;
+    border-radius: 12px;
+    width: 450px; /* largura base em desktop */
+    max-width: 90%; /* responsivo */
+    min-width: 280px; /* evita ficar estreito demais */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    animation: aparecer 0.3s ease;
+    text-align: left;
+    font-size: 15px;
 }
 
-/* botões */
-.form-botoes {
+.modal-conteudo h2 {
+    font-size: 22px;
+    margin: 15px 0; /* espaço acima e abaixo */
+    color: var(--cor-escura);
+}
+
+/* botão fechar */
+.fechar {
+    color: var(--cor-escura);
+    float: right; /* posiciona no canto superior direito */
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fechar:hover {
+    color: var(--cor-roxo-escuro);
+}
+
+/* lista do carrinho */
+.lista-carrinho {
+    list-style: none; /* remove marcadores */
+    padding-left: 0; /* tira o recuo padrão do ul */
+    margin: 20px 0;
+}
+
+.carrinho-item {
     display: flex;
-    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding: 12px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* linha sutil entre itens */
+    border-radius: 8px;
+    font-size: 15px;
 }
 
-.form-botoes--guardar {
-    width: 188px;
-    padding: 10px;
+/* nome ocupa o maximo de espaco disponivel */
+.carrinho-nome {
+    flex: 1;
+    font-weight: 500;
+    text-align: left;
+    color: var(--cor-escura);
+}
+
+/* preço alinhado a direita */
+.carrinho-preco {
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    margin: 0 10px;
+    white-space: nowrap;
+    text-align: right;
+    min-width: 80px; /* mantém alinhamento visual */
+}
+
+/* carrinho vazio */
+.carrinho-vazio {
+    text-align: center;
+    padding: 22px 10px;
+    color: #666;
+    font-size: 15px;
+    font-style: italic;
+}
+
+/* botao remover */
+.btn-remover {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: crimson;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.btn-remover:hover {
+    transform: scale(1.2); /* aumenta o botão */
+    color: darkred;
+}
+
+/* rodape do carrinho */
+.carrinho-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* mantém o total alinhado à direita */
+    gap: 20px;
+    padding-top: 10px;
+}
+
+/* total */
+.carrinho-total {
+    font-family: var(--fonte-secundaria);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--cor-escura);
+}
+
+/* Botao finalizar */
+.btn-finalizar {
+    align-self: stretch; /* ocupa toda a largura do container flex */
+    padding: 14px;
+    background: var(--cor-roxo-escuro);
+    color: var(--cor-clara);
+    font-size: 16px;
     border: none;
     border-radius: 8px;
-    background-color: var(--cor-roxo-claro);
-    color: var(--cor-clara);
-    font-size: 1.25rem;
-    outline: none; /* sem marcação ao redor */
+    cursor: pointer;
 }
 
-.form-botoes--limpar {
-    width: 188px;
-    padding: 10px;
-    border: 2px solid #3D3D3D;
-    border-radius: 8px;
-    background-color: var(--cor-clara);
-    color: var(--cor-escura);
-    font-size: 1.25rem;
-    outline: none; /* sem marcação ao redor */
+/* Animação */
+@keyframes aparecer {
+    from { transform: translateY(-50px); opacity: 0; } /* começa acima e transparente */
+    to { transform: translateY(0); opacity: 1; } /* termina na posicao normal e opaco */
 }
 
-/* rodapé */
+/* rodape */
 .container-rodape {
     background-color: var(--cor-azul);
     padding: 54px;

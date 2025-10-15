@@ -4,139 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css"> 
+    <link rel="stylesheet" href="styles/responsive.css">
+    <!-- Conexao com Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Fontes do Projeto: Raleway -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Fontes do Projeto Raleway e Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&
+    family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap" rel="stylesheet">
     <title>AluraGeek</title>
 </head>
 <body>
-    <!-- Cabeçalho -->
+    <!-- Cabecalho -->
     <header class="cabecalho">
         <h1 class="cabecalho-titulo">Setup Gamer</h1>
-        <a class="cabecalho-botao" href="">
+        <button class="cabecalho-botao" id="abrir-carrinho" aria-label="Abrir carrinho">
             Shop
             <img class="icone-carrinho" src="./assets/icone-carrinho.png" alt="Ícone de carrinho">
-        </a>
+        </button>
     </header>
 
     <!-- Container principal -->
     <main class="container-principal">
 
-        <!-- Seção meus produtos -->
-        <section class="produtos">
-            <h1 class="produtos-titulo">Produtos:</h1>
-            <ul class="produtos-lista">
-                <li class="produtos-lista--item">
+        <!-- Secao produtos -->
+        <section class="lista">
+            <h2 class="lista-titulo">Produtos:</h2>
+            <ul class="lista-produtos">
+                <li class="lista-produtos--item">
                     <img class="item-img" src="./assets/anel de luz led.png" alt="Iluminária">
                     <h4 class="item-nome">Anel de Luz LED</h4> <!-- Anel de Luz LED Ring Light RGB 10 -->
-                    <div class="item-value">
-                        <p>R$ 94,00</p> <!-- preço na Amazon -->
-                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    <div class="item-descricao">
+                        <span class="item-preco">R$ 94,00</span> <!-- preco na Amazon -->
+                        <button type="button" class="btn-carrinho" aria-label="Adicionar Anel de Luz LED ao carrinho">
+                            <img src="./assets/icone-carrinho.png" alt="Adicionar ao carrinho">
+                        </button>
                     </div>
                 </li>
-                <li class="produtos-lista--item">
+                <li class="lista-produtos--item">
                     <img class="item-img" src="./assets/cadeira-gamer.png" alt="Cadeira gamer">
                     <h4 class="item-nome">Cadeira Gamer</h4> <!-- Cadeira Gamer Pelegrin em Couro -->
-                    <div class="item-value">
-                        <p>R$ 499,00</p> <!-- preço na Amazon -->
-                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    <div class="item-descricao">
+                        <span class="item-preco">R$ 499,00</span> <!-- preco na Amazon -->
+                        <button type="button" class="btn-carrinho" aria-label="Adicionar Cadeira Gamer ao carrinho">
+                            <img src="./assets/icone-carrinho.png" alt="Adicionar ao carrinho">
+                        </button>
                     </div>
                 </li>
-                <li class="produtos-lista--item">
+                <li class="lista-produtos--item">
                     <img class="item-img" src="./assets/monitor-gamer.png" alt="Monitor">
                     <h4 class="item-nome">Monitor Samsung</h4> <!-- Monitor Curvo Samsung LED 27 -->
-                    <div class="item-value">
-                        <p>R$ 799,00</p> <!-- preço na Amazon -->
-                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    <div class="item-descricao">
+                        <span class="item-preco">R$ 799,00</span> <!-- preco na Amazon -->
+                        <button type="button" class="btn-carrinho" aria-label="Adicionar Monitor Samsung ao carrinho">
+                            <img src="./assets/icone-carrinho.png" alt="Adicionar ao carrinho">
+                        </button>
                     </div>
                 </li>
-                <li class="produtos-lista--item">
+                <li class="lista-produtos--item">
                     <img class="item-img" src="./assets/pc-gamer.png" alt="CPU gamer">
                     <h4 class="item-nome">Pc Gamer 3green Intel</h4> <!-- Pc Gamer 3green Play Intel Core I7 -->
-                    <div class="item-value">
-                        <p>R$ 1.434,39</p> <!-- preço no Carrefour -->
-                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    <div class="item-descricao">
+                        <span class="item-preco">R$ 1.434,39</span> <!-- preco no Carrefour -->
+                        <button type="button" class="btn-carrinho" aria-label="Adicionar Pc Gamer 3green Intel ao carrinho">
+                            <img src="./assets/icone-carrinho.png" alt="Adicionar ao carrinho">
+                        </button>
                     </div>
                 </li>
-                <li class="produtos-lista--item">
+                <li class="lista-produtos--item">
                     <img class="item-img" src="./assets/console playstation-gamer.png" alt="Console PlayStation">
-                    <h4 class="item-nome">Console PlayStation 5</h4> <!-- Console PlayStation 5 Slim Edição Digital -->
-                    <div class="item-value">
-                        <p>R$ 3.327,01</p> <!-- preço na Amazon -->
-                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    <h4 class="item-nome">Console PlayStation 5</h4> <!-- Console PlayStation 5 Slim Edicao Digital -->
+                    <div class="item-descricao">
+                        <span class="item-preco">R$ 3.327,01</span> <!-- preco na Amazon -->
+                        <button type="button" class="btn-carrinho" aria-label="Adicionar Console PlayStation 5 ao carrinho">
+                            <img src="./assets/icone-carrinho.png" alt="Adicionar ao carrinho">
+                        </button>
                     </div>
                 </li>
-                <li class="produtos-lista--item">
+                <li class="lista-produtos--item">
                     <img class="item-img" src="./assets/headset-gamer.png" alt="Headset gamer">
                     <h4 class="item-nome">Headset Gamer</h4>
-                    <div class="item-value">
-                        <p>R$ 79,90</p> <!-- preço na Amazon -->
-                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    <div class="item-descricao">
+                        <span class="item-preco">R$ 79,90</span> <!-- preco na Amazon -->
+                        <button type="button" class="btn-carrinho" aria-label="Adicionar Headset Gamer ao carrinho">
+                            <img src="./assets/icone-carrinho.png" alt="Adicionar ao carrinho">
+                        </button>
                     </div>
                 </li>
-                <li class="produtos-lista--item">
+                <li class="lista-produtos--item">
                     <img class="item-img" src="./assets/teclado-gamer.png" alt="Teclado gamer">
                     <h4 class="item-nome">Teclado Gamer</h4>
-                    <div class="item-value">
-                        <p>R$ 47,78</p> <!-- preço na Amazon -->
-                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    <div class="item-descricao">
+                        <span class="item-preco">R$ 47,78</span> <!-- preco na Amazon -->
+                        <button type="button" class="btn-carrinho" aria-label="Adicionar Teclado Gamer ao carrinho">
+                            <img src="./assets/icone-carrinho.png" alt="Adicionar ao carrinho">
+                        </button>
                     </div>
                 </li>
-                <li class="produtos-lista--item">
+                <li class="lista-produtos--item">
                     <img class="item-img" src="./assets/mouse-gamer.png" alt="Mouse gamer">
                     <h4 class="item-nome">Mouse Gamer</h4> 
-                    <div class="item-value">
-                        <p>R$ 190,00</p> <!-- preço na Amazon -->
-                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    <div class="item-descricao">
+                        <span class="item-preco">R$ 190,00</span> <!-- preco na Amazon -->
+                        <button type="button" class="btn-carrinho" aria-label="Adicionar Mouse Gamer ao carrinho">
+                            <img src="./assets/icone-carrinho.png" alt="Adicionar ao carrinho">
+                        </button>
                     </div>
                 </li>
-                <li class="produtos-lista--item">
+                <li class="lista-produtos--item">
                     <img class="item-img" src="./assets/mesa-gamer.png" alt="Mesa gamer">
                     <h4 class="item-nome">Mesa Gamer</h4>
-                    <div class="item-value">
-                        <p>R$ 169,00</p> <!-- preço na Amazon -->
-                        <img src="./assets/vetor-delete.png" alt="Ícone delete">
+                    <div class="item-descricao">
+                        <span class="item-preco">R$ 169,00</span> <!-- preco na Amazon -->
+                        <button type="button" class="btn-carrinho" aria-label="Adicionar Mesa Gamer ao carrinho">
+                            <img src="./assets/icone-carrinho.png" alt="Adicionar ao carrinho">
+                        </button>
                     </div>
                 </li>
             </ul>
+            <button class="seta-esquerda">←</button>
+            <button class="seta-direita">→</button>
         </section>
-        <button class="seta-esquerda">←</button>
-        <button class="seta-direita">→</button>
 
-        <!-- Seção adicionar produtos -->
-        <section class="form" id="formulario">
-            <h1 class="form-titulo">Adicionar Produto:</h1>
-            <!-- forms -->
-            <form class="form-inputs">
-                <div class="form-grupo">
-                    <label for="Nome"></label>
-                    <input class="form-grupo--campo" type="text" id="name" name="nome" placeholder="nome..." required>
+        <!-- Modal do carrinho -->
+        <div id="carrinho-modal" class="modal">
+            <div class="modal-conteudo">
+                <span class="fechar">&times;</span> <!-- Botao de fechar o modal -->
+                <h2>Meu Carrinho</h2>
+                <ul id="lista-carrinho" class="carrinho-lista">
+                    <!-- Itens são adicionados dinamicamente por renderizarCarrinho() -->
+                </ul>
+                <div class="carrinho-footer">
+                    <p id="total" class="carrinho-total">Total: R$ 0,00</p> <!-- Total atualizado dinamicamente -->
+                    <button class="btn-finalizar">Finalizar Compra</button>
                 </div>
-                <div class="form-grupo">
-                    <label for="Valor"></label>
-                    <input class="form-grupo--campo" type="text" id="valor" name="valor" placeholder="valor..." required>
-                </div>
-                <div class="form-grupo">
-                    <label for="Valor"></label>
-                    <input class="form-grupo--campo" type="text" id="imagem" name="imagem" placeholder="imagem..." required>
-                </div>
-            </form>
-            <div class="form-botoes">
-                <button class="form-botoes--guardar">Guardar</button>
-                <button class="form-botoes--limpar">Limpar</button>
             </div>
-        </section>
+        </div>
     </main>
 
-    <!--Rodapé-->
+    <!--Rodape-->
     <footer class="container-rodape">
         <div>
-            <img src="./assets/logo-alurageek.png" alt="Logo do AluraGeek">
+            <img class="rodape-logo" src="./assets/logo-alurageek.png" alt="Logo do AluraGeek">
         </div>
         <p class="rodape-texto">Desenvolvido por Stephanny Monteiro</p>
         <small class="rodape-texto">Alura Latam- 2024</small>
     </footer>
-        <script src="main.js"></script>
+        <script type="module" src="./js/api.js"></script> <!-- CRUD no servidor -->
+        <script type="module" src="./js/carrossel.js"></script> <!-- container dinamico -->
+        <script type="module" src="./js/dom.js"></script> <!-- renderiza os produtos -->
+        <script type="module" src="./js/main.js"></script> <!-- inicializacao e eventos do form -->
 </body>
 </html>
