@@ -9,6 +9,7 @@
 
     --fonte-primaria: 'Raleway', sans-serif;
     --fonte-secundaria: 'Roboto', sans-serif;
+    --fonte-terciaria: 'Playwrite CA', cursive; /* nome -assinatura */
 }
 
 /* estrutura da pagina */
@@ -40,7 +41,7 @@ ol, ul, li {
     padding: 15px 30px 15px 30px;
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 20px; /* espaçamento entre titulo e botao */
 }
 
 .cabecalho-titulo {
@@ -365,6 +366,29 @@ ol, ul, li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 12px; /* espacamento entre logo e textos */
+}
+
+.rodape-textos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* espacamento entre as duas linhas de texto */
+}
+
+/* texto principal (assina o projeto) */
+.rodape-textos p {
+    font-family: var(--fonte-terciaria); /* cursiva */
+    font-weight: 300;
+    font-size: 0.95rem;
+}
+
+/* texto secundario (creditos institucionais) */
+.rodape-textos small {
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+    font-size: 0.9rem;
+    opacity: 0.8; /* dá contraste sutil */
 }
 
 .rodape-texto {
