@@ -71,8 +71,8 @@
 
     /* rodape */
     .container-rodape {
-        padding: 25px 15px; /* laterais */
-        gap: 6px;
+        padding: 50px 15px; /* aumenta o padding superior e inferior */
+        gap: 8px;
     }
 
     .rodape-logo {
