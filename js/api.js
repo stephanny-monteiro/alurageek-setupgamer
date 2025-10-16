@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/carrinho';
+const API_URL = 'https://setupgamer-api.onrender.com/carrinho';
 
 // GET - Buscar todos os itens do carrinho
 export async function obterCarrinho() {
