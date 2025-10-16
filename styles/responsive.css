@@ -71,11 +71,20 @@
 
     /* rodape */
     .container-rodape {
-        padding: 30px 15px 30px 15px;
+        padding: 25px 15px; /* laterais */
+        gap: 6px;
     }
 
     .rodape-logo {
-        width: 100%; /* ajusta a largura da imagem para 100% do contêiner pai */
-        height: auto; /* mantem a proporcao da imagem */
+        width: 190px;
+        height: auto;
+    }
+
+    .rodape-textos p {
+        display: none; /* esconde o paragrafo no mobile */
+    }
+
+    .rodape-textos small {
+        font-size: 0.8rem;
     }
 };

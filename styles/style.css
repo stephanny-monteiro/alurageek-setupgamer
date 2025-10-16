@@ -9,8 +9,7 @@
 
     --fonte-primaria: 'Raleway', sans-serif;
     --fonte-secundaria: 'Roboto', sans-serif;
-    --fonte-terciaria: 'Playwrite CA', cursive; /* nome -assinatura */
-}
+} 
 
 /* estrutura da pagina */
 * {
@@ -366,7 +365,12 @@ ol, ul, li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px; /* espacamento entre logo e textos */
+    gap: 10px; /* espacamento entre logo e textos */
+}
+
+.rodape-logo {
+    width: 250px;
+    height: auto; /* mantém a proporção original */
 }
 
 .rodape-textos {
@@ -378,7 +382,7 @@ ol, ul, li {
 
 /* texto principal (assina o projeto) */
 .rodape-textos p {
-    font-family: var(--fonte-terciaria); /* cursiva */
+    font-family: var(--fonte-secundaria);
     font-weight: 300;
     font-size: 0.95rem;
 }
@@ -387,8 +391,8 @@ ol, ul, li {
 .rodape-textos small {
     font-family: var(--fonte-secundaria);
     font-weight: 400;
-    font-size: 0.9rem;
-    opacity: 0.8; /* dá contraste sutil */
+    font-size: 0.85rem;
+    opacity: 0.85; /* dá contraste sutil */
 }
 
 .rodape-texto {
